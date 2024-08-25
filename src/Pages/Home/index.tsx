@@ -12,7 +12,9 @@ export const HomePage: React.FC = () => {
   const [dinner, setDinner] = useState<any[]>([]);
   const [rice, setRice] = useState<any[]>([]);
   const [drinks, setDrinks] = useState<any[]>([]);
-  // const [heading, setHeading] = useState<any[]>([]);
+  const [currie, setCurrie] = useState<any[]>([]);
+  const [specials, setSpecials] = useState<any[]>([]);
+  const [biryani, setBiryani] = useState<any[]>([]);
   const [title, setTitle] = useState<any[]>([]);
   const [address, setAddress] = useState<any[]>([]);
   const [number, setNumber] = useState<any[]>([]);
@@ -90,6 +92,49 @@ export const HomePage: React.FC = () => {
         setLoading(false); // Set loading to false once both requests are completed
       }
     };
+
+    const fetchSpecials = async () => {
+      try {
+        const drinksEntries = await client.getEntries({
+          content_type: "specials",
+        });
+        setSpecials(drinksEntries.items.map((item: any) => item.fields));
+      } catch (err) {
+        setError("Failed to fetch lunch data from Contentful");
+        console.error("Error fetching lunch data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const fetchCurrie = async () => {
+      try {
+        const drinksEntries = await client.getEntries({
+          content_type: "curris",
+        });
+        setCurrie(drinksEntries.items.map((item: any) => item.fields));
+      } catch (err) {
+        setError("Failed to fetch lunch data from Contentful");
+        console.error("Error fetching lunch data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const fetchBiryani = async () => {
+      try {
+        const drinksEntries = await client.getEntries({
+          content_type: "biryanis",
+        });
+        setBiryani(drinksEntries.items.map((item: any) => item.fields));
+      } catch (err) {
+        setError("Failed to fetch lunch data from Contentful");
+        console.error("Error fetching lunch data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     const fetchheadingData = async () => {
       try {
         const headingEntries = await client.getEntries({
@@ -114,6 +159,9 @@ export const HomePage: React.FC = () => {
     fetchRiceDelicacies();
     fetchDrinks();
     fetchheadingData();
+    fetchSpecials();
+    fetchCurrie();
+    fetchBiryani();
   }, []);
 
   if (loading) {
@@ -169,11 +217,39 @@ export const HomePage: React.FC = () => {
             ))}
           </>
         )}
+
+        {specials.length > 0 && (
+          <>
+            {specials.map((entry, index) => (
+              <Card key={index} categoryData={entry} />
+            ))}
+          </>
+        )}
+
+        {currie.length > 0 && (
+          <>
+            {currie.map((entry, index) => (
+              <Card key={index} categoryData={entry} />
+            ))}
+          </>
+        )}
+
+        {biryani.length > 0 && (
+          <>
+            {biryani.map((entry, index) => (
+              <Card key={index} categoryData={entry} />
+            ))}
+          </>
+        )}
+
         {recipes.length === 0 &&
           lunch.length === 0 &&
           dinner.length === 0 &&
           rice.length === 0 &&
-          drinks.length === 0 && <p>No data available</p>}
+          drinks.length === 0 &&
+          specials.length === 0 &&
+          currie.length === 0 &&
+          biryani.length === 0 && <p>No data available</p>}
       </CardWrapper>
       <br />
       <br />
