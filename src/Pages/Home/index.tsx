@@ -181,23 +181,16 @@ export const HomePage: React.FC = () => {
       <TextStyle>{number}</TextStyle>
 
       <CardWrapper>
+        {specials.length > 0 && (
+          <>
+            {specials.map((entry, index) => (
+              <Card key={index} categoryData={entry} />
+            ))}
+          </>
+        )}
         {dinner.length > 0 && (
           <>
             {dinner.map((entry, index) => (
-              <Card key={index} categoryData={entry} />
-            ))}
-          </>
-        )}
-        {recipes.length > 0 && (
-          <>
-            {recipes.map((entry, index) => (
-              <Card key={index} categoryData={entry} />
-            ))}
-          </>
-        )}
-        {lunch.length > 0 && (
-          <>
-            {lunch.map((entry, index) => (
               <Card key={index} categoryData={entry} />
             ))}
           </>
@@ -210,25 +203,9 @@ export const HomePage: React.FC = () => {
             ))}
           </>
         )}
-        {drinks.length > 0 && (
+        {recipes.length > 0 && (
           <>
-            {drinks.map((entry, index) => (
-              <Card key={index} categoryData={entry} />
-            ))}
-          </>
-        )}
-
-        {specials.length > 0 && (
-          <>
-            {specials.map((entry, index) => (
-              <Card key={index} categoryData={entry} />
-            ))}
-          </>
-        )}
-
-        {currie.length > 0 && (
-          <>
-            {currie.map((entry, index) => (
+            {recipes.map((entry, index) => (
               <Card key={index} categoryData={entry} />
             ))}
           </>
@@ -237,6 +214,29 @@ export const HomePage: React.FC = () => {
         {biryani.length > 0 && (
           <>
             {biryani.map((entry, index) => (
+              <Card key={index} categoryData={entry} />
+            ))}
+          </>
+        )}
+
+        {lunch.length > 0 && (
+          <>
+            {lunch.map((entry, index) => (
+              <Card key={index} categoryData={entry} />
+            ))}
+          </>
+        )}
+        {currie.length > 0 && (
+          <>
+            {currie.map((entry, index) => (
+              <Card key={index} categoryData={entry} />
+            ))}
+          </>
+        )}
+
+        {drinks.length > 0 && (
+          <>
+            {drinks.map((entry, index) => (
               <Card key={index} categoryData={entry} />
             ))}
           </>
@@ -255,8 +255,8 @@ export const HomePage: React.FC = () => {
       <br />
       <br />
 
-      {/* <TextStyle>SWAMINARAYAN: S & JAIN: J</TextStyle> */}
-      {/* <TextStyle>Catering option availa</TextStyle> */}
+      <TextStyle>SWAMINARAYAN & JAIN OPTION AVAILABLE</TextStyle>
+      <TextStyle>Catering option available</TextStyle>
     </>
   );
 };

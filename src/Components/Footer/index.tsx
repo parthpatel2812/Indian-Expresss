@@ -43,26 +43,6 @@ export const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <InnerContainer>
-        {/* <TimingContainer>
-          <p id="Footer-section">OPENING HOURS</p>
-          {error && <p>{error}</p>}
-          {timing.length > 0 ? (
-            timing.map((entry: any, index: number) =>
-              entry.fields && entry.fields.day && entry.fields.time ? (
-                entry.fields.day.map((day: string, idx: number) => (
-                  <TimingEntry key={idx}>
-                    <strong>{day} :-</strong>
-                    {entry.fields.time[idx]}
-                  </TimingEntry>
-                ))
-              ) : (
-                <p key={index}>Invalid data structure</p>
-              )
-            )
-          ) : (
-            <p>Loading...</p>
-          )}
-        </TimingContainer> */}
         <TimingContainer>
           <FooterSection id="Footer-section">OPENING HOURS</FooterSection>
           {error && <p>{error}</p>}

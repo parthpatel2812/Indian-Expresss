@@ -8,6 +8,8 @@ export const CardContainer = styled.div`
   border-radius: 10px;
   padding: 20px;
   cursor: default;
+  line-height: 2.5;
+  font-size: 18px;
 
   &::before {
     content: "";
