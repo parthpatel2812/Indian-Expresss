@@ -5,20 +5,34 @@ import Marquee from "react-fast-marquee";
 import title from "../../assets/title.jpg";
 
 export const StyledLink = styled(Link)`
- color: #c7e5d7;
-  text-decoration: none;
-  font-family: Overlock-Regular, Arial, Helvetica, sans-serif;
-  display: flex;
-  margin: 10px;
-  justify-content: space-around;
-  transform: translateX(5%);
+//  color: #c7e5d7;
+//   text-decoration: none;
+//   font-family: Overlock-Regular, Arial, Helvetica, sans-serif;
+//   display: flex;
+//   margin: 10px;
+//   justify-content: space-around;
+//   transform: translateX(5%);
   
-  &:hover {
-    color:rgb(83, 102, 188);
-    box-sizing: border-box;
-    letter-spacing: 2px;
+//   &:hover {
+//     color:rgb(83, 102, 188);
+//     box-sizing: border-box;
+//     letter-spacing: 2px;
     
+//   }
+  padding: 10px 20px;
+  text-decoration: none;
+  // background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+
+  &:hover {
+    // border: 2px solid white; /* White border around the button */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Optional glow effect */
   }
+
 `;
 
 export const ImgStyle = styled.img`
@@ -195,19 +209,32 @@ export const MarqueeWrapper = styled(Marquee)`
 `;
 
 export const Timing = styled.a`
-  color: #c7e5d7;
-  text-decoration: none;
-  font-family: Overlock-Regular, Arial, Helvetica, sans-serif;
-  display: flex;
-  margin: 10px;
-  justify-content: space-around;
-  transform: translateX(5%);
+  // color: #c7e5d7;
+  // text-decoration: none;
+  // font-family: Overlock-Regular, Arial, Helvetica, sans-serif;
+  // display: flex;
+  // margin: 10px;
+  // justify-content: space-around;
+  // transform: translateX(5%);
   
-  &:hover {
-    color:rgb(83, 102, 188);
-    box-sizing: border-box;
-    letter-spacing: 2px;
+  // &:hover {
+  //   color:rgb(83, 102, 188);
+  //   box-sizing: border-box;
+  //   letter-spacing: 2px;
     
+  // }
+   padding: 10px 20px;
+  text-decoration: none;
+  // background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+
+  &:hover {
+    // border: 2px solid white; /* White border around the button */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Optional glow effect */
   }
 
 `;
