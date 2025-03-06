@@ -16,6 +16,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navbar } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { Timing } from "./style";
 
 export const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -93,9 +94,9 @@ export const Sidebar = () => {
               Food Truck
             </StyledLink>
             <hr />
-            <StyledLink to="#" onClick={handleScrollToFooter}>
-              Timing
-            </StyledLink>
+            <Timing href="https://www.bing.com/search?q=%2bThe+Indian+Expresss+Food+Truck&filters=rcrse%3a%221%22&FORM=RCRE#:~:text=Closed%20%C2%B7-,Opens%20Mar%205%20at%206%20pm,-Walk%2Din%20%C2%B7">
+                  Timing
+                  </Timing>
             <hr />
             <StyledLink to={routes.home} onClick={handleScrollToFooter}>
               Location

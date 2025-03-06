@@ -3,8 +3,9 @@ import { MarqueeWrapper } from "./style";
 export const Marquee = () => {
   return (
     <MarqueeWrapper pauseOnHover={true}>
-      THE INDIAN EXPRESS || The Taste of India || opening Soon! || Get Ready
-      Dallas Foodies
+      
+        📍 *Before you head out, double-check the location on Google Maps* 🚀
+    
     </MarqueeWrapper>
   );
 };

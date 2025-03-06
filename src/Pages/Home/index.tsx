@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "../../Components/Card";
-import { CardWrapper, HeadingStyle, ImageTitle, TextStyle } from "./style";
+import { CardWrapper, HeadingStyle, ImageTitle, TextStyle, TextStyle1 } from "./style";
 import titleBaseUrl from "../../assets/title-base.png";
 import { client } from "../../contentful/client";
 
@@ -179,7 +179,8 @@ export const HomePage: React.FC = () => {
       <TextStyle>{address}</TextStyle>
 
       <TextStyle>{number}</TextStyle>
-
+      <br/>
+<TextStyle1>📍 *Before you head out, double-check the location on Google Maps* 🚀</TextStyle1>
       <CardWrapper>
         {specials.length > 0 && (
           <>

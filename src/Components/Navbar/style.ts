@@ -5,14 +5,19 @@ import Marquee from "react-fast-marquee";
 import title from "../../assets/title.jpg";
 
 export const StyledLink = styled(Link)`
-  color: #c7e5d7;
+ color: #c7e5d7;
   text-decoration: none;
   font-family: Overlock-Regular, Arial, Helvetica, sans-serif;
   display: flex;
   margin: 10px;
   justify-content: space-around;
+  transform: translateX(5%);
+  
   &:hover {
-    color: #ad0d0d;
+    color:rgb(83, 102, 188);
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    
   }
 `;
 
@@ -59,7 +64,9 @@ export const ImgStyle = styled.img`
 export const NavStyle = styled.nav`
   background-image: url(${title});
   filter: drop-shadow(8px 8px 10px #fff);
-  color: #8b6c6c;
+  background-color:rgba(113, 51, 85, 0.86);;
+  // color: #8b6c6c;
+  color:rgb(184, 23, 23);
   position: fixed;
   z-index: 999;
 
@@ -94,6 +101,7 @@ export const NavStyle = styled.nav`
     height: 90px;
     padding: 0 0px;
     margin-top: -126px;
+    background-image: repeat;
   }
 
   @media (${devices.laptopL}) {
@@ -184,4 +192,22 @@ export const MarqueeWrapper = styled(Marquee)`
     right: 0;
     z-index: 9999;
   }
+`;
+
+export const Timing = styled.a`
+  color: #c7e5d7;
+  text-decoration: none;
+  font-family: Overlock-Regular, Arial, Helvetica, sans-serif;
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+  transform: translateX(5%);
+  
+  &:hover {
+    color:rgb(83, 102, 188);
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    
+  }
+
 `;

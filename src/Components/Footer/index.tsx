@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   FooterContainer,
-  InnerContainer,
   FooterLinks,
   ContactDetails,
   ContactInfo,
   ContactLabel,
-  TimingEntry,
-  TimingContainer,
-  Time,
-  FooterSection,
-  Day,
+  
 } from "./style";
 import { client } from "../../contentful/client";
 import { GoogleMapComponent } from "./Map";
@@ -21,29 +16,14 @@ export const emailLink = "mailto:Indian.express24@gmail.com";
 export const phoneLink = "tel:02692 230796";
 
 export const Footer: React.FC = () => {
-  const [timing, setTiming] = useState<any[]>([]);
-  const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const timingEntries = await client.getEntries({
-          content_type: "timing",
-        });
-        console.log(timingEntries);
-        setTiming(timingEntries.items);
-      } catch (err) {
-        setError("Failed to fetch timing data from Contentful");
-        console.error("Error fetching timing:", err);
-      }
-    };
-    fetchData();
-  }, []);
+
+  
 
   return (
-    <FooterContainer>
-      <InnerContainer>
-        <TimingContainer>
+    <FooterContainer id='Footer-section'>
+      {/* <InnerContainer> */}
+        {/* <TimingContainer>
           <FooterSection id="Footer-section">OPENING HOURS</FooterSection>
           {error && <p>{error}</p>}
           {timing.length > 0 ? (
@@ -62,10 +42,9 @@ export const Footer: React.FC = () => {
           ) : (
             <p>Loading...</p>
           )}
-        </TimingContainer>
+        </TimingContainer> */}
 
         <GoogleMapComponent />
-
         <FooterLinks>
           <ContactDetails>
             <ContactLabel>Phone:</ContactLabel>
@@ -73,11 +52,11 @@ export const Footer: React.FC = () => {
             <br />
             <ContactLabel>Email:</ContactLabel>
             <ContactInfo href={emailLink}>
-              Indian.express24@gmail.com
+            Indian.expresss24@gmail.com
             </ContactInfo>
           </ContactDetails>
         </FooterLinks>
-      </InnerContainer>
+      {/* </InnerContainer> */}
     </FooterContainer>
   );
 };

@@ -7,29 +7,29 @@ export const FooterContainer = styled.footer`
   padding: 20px;
 `;
 
-export const InnerContainer = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #e5bcbc;
+// export const InnerContainer = styled.div`
+//   // max-width: 1200px;
+//   margin: 0 auto;
+//   // display: flex;
+//   // flex-direction: column;
+//   align-items: center;
+//   color: #e5bcbc;
 
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-`;
+//   @media (min-width: 768px) {
+//     // flex-direction: row;
+//     justify-content: space-between;
+//   }
+// `;
 
 export const FooterLinks = styled.div`
   margin-top: 10px;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   align-items: center;
 
   @media (min-width: 768px) {
     margin-top: 0;
-    flex-direction: row;
+    // flex-direction: row;
   }
 `;
 
@@ -63,14 +63,16 @@ export const ContactInfo = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: #800000;
+    color:rgb(169, 151, 151);
   }
 `;
 
 export const ContactLabel = styled.span`
   font-weight: bold;
-  float: left;
+  // float: left;
   margin-right: 10px;
+  text-align: center;
+    color:rgba(241, 236, 236, 0.58);
 `;
 
 export const ContactLink = styled.a`
@@ -109,23 +111,23 @@ export const MapContainer = styled.div`
   height: 400px;
 
   @media (min-width: 320px) {
-    width: 50%;
+    // width: 50%;
     height: 250px; // Adjust height for larger screens
   }
 
   @media (min-width: 425px) {
-    width: 50%;
+    // width: 50%;
     height: 250px; // Adjust height for larger screens
   }
 
   @media (min-width: 768px) {
-    width: 30%;
+    // width: 30%;
     height: 250px; // Adjust height for larger screens
   }
 
   @media (min-width: 1024px) {
     height: 300px; // Adjust height for even larger screens
-    width: 50%;
+    // width: 50%;  
   }
 `;
 
@@ -141,3 +143,4 @@ export const Day = styled.strong`
 export const Time = styled.span`
   color: #fff; /* White color for the time */
 `;
+

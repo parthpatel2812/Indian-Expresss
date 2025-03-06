@@ -6,7 +6,11 @@ import ArrowIcon from "../../assets/arrow-down.png";
 import { devices } from "../../style";
 
 export const SidebarStyle = styled.div<{ isOpen: boolean }>`
-  background-image: url(${title});
+  // background-image: url(${title});
+    // background-color:rgb(174, 174, 116);
+     background-color:#7e5959;
+    #7e5959;
+
   background-size: cover;
   width: 300px;
   height: 100%;
@@ -19,7 +23,7 @@ export const SidebarStyle = styled.div<{ isOpen: boolean }>`
   padding: 1rem;
   flex-direction: column;
   box-shadow: ${({ isOpen }) =>
-    isOpen ? "0 0 10px rgba(0, 0, 0, 0.5)" : "none"};
+    isOpen ? "0 0 10px rgba(147, 71, 71, 0.5)" : "none"};
 `;
 
 export const nav = styled.nav`
@@ -30,7 +34,8 @@ export const nav = styled.nav`
 `;
 
 export const NavStyle = styled.nav`
-  background-image: url(${title});
+  // background-image: url(${title});
+  background-color:#7e5959;;
   background-size: repeat;
   margin-top: 0;
   display: block;
@@ -56,6 +61,23 @@ export const ToggleButton = styled.button`
 `;
 
 export const StyledLink = styled(Link)`
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 20px;
+  padding: 2px 16px;
+
+  &:hover {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
+`;
+export const Timing = styled.a`
   display: block;
   color: #fff;
   text-decoration: none;

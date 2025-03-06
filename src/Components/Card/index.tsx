@@ -20,18 +20,18 @@ export const Card: React.FC<CardProps> = ({ categoryData }) => {
   const { title, dishName, amount } = categoryData;
   const [show, setShow] = useState(false);
 
-  const fadeAnimation = useSpring({
-    opacity: show ? 1 : 0,
-    from: { opacity: 0 },
-    config: { duration: 500 },
-  });
+  // const fadeAnimation = useSpring({
+  //   opacity: show ? 1 : 0,
+  //   from: { opacity: 0 },
+  //   config: { duration: 500 },
+  // });
 
   useEffect(() => {
     setShow(true);
   }, []);
 
   return (
-    <animated.div style={fadeAnimation}>
+    // <animated.div style={fadeAnimation}>
       <CardContainer>
         <CardTitle>{title}</CardTitle>
         {dishName.map((name, index) => (
@@ -41,6 +41,6 @@ export const Card: React.FC<CardProps> = ({ categoryData }) => {
           </CardText>
         ))}
       </CardContainer>
-    </animated.div>
+    // </animated.div>
   );
 };

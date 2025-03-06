@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Cardbackground from "../../assets/image.jpeg";
 
 export const CardContainer = styled.div`
@@ -25,50 +25,51 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const lights = keyframes`
-  0% {
-    color: hsl(230, 40%, 80%);
-    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
-  }
+// export const lights = keyframes`
+//   0% {
+//     color: hsl(230, 40%, 80%);
+//     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+//       0 0 0.125em hsla(320, 100%, 60%, 0.3),
+//       -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+//       1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+//   }
 
-  30% {
-    color: hsl(230, 80%, 90%);
-    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 60%, 0.5),
-      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
-      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
-  }
+//   30% {
+//     color: hsl(230, 80%, 90%);
+//     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+//       0 0 0.125em hsla(320, 100%, 60%, 0.5),
+//       -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+//       0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+//   }
 
-  40% {
-    color: hsl(230, 100%, 95%);
-    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 90%, 0.5),
-      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
-      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
-  }
+//   40% {
+//     color: hsl(230, 100%, 95%);
+//     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+//       0 0 0.125em hsla(320, 100%, 90%, 0.5),
+//       -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+//       0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+//   }
 
-  70% {
-    color: hsl(230, 80%, 90%);
-    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 60%, 0.5),
-      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
-      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
-  }
+//   70% {
+//     color: hsl(230, 80%, 90%);
+//     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+//       0 0 0.125em hsla(320, 100%, 60%, 0.5),
+//       0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+//       -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+//   }
 
-  100% {
-    color: hsl(230, 40%, 80%);
-    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
-}`;
+//   100% {
+//     color: hsl(230, 40%, 80%);
+//     text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+//       0 0 0.125em hsla(320, 100%, 60%, 0.3),
+//       1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+//       -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+// }`;
 
 export const CardTitle = styled.h1`
   text-align: center;
-  animation: ${lights} 5s 750ms linear infinite;
+  // animation:  5s 750ms linear infinite;
+  color:rgba(227, 218, 223, 0.86);
 `;
 
 export const ItemName = styled.span`

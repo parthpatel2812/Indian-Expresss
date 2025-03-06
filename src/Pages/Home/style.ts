@@ -264,3 +264,39 @@ export const TextStyle = styled.p`
     margin-bottom: 20px;
   }
 `;
+
+export const TextStyle1 = styled.p`
+  color: #8b6c6c;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  cursor: default;
+
+  @media (${devices.mobileES}) {
+    font-weight: 50 !important;
+    font-size: 0.5 !important;
+    line-height: 20px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 20px;
+  }
+
+  @media (${devices.mobileS}) {
+    font-weight: 150 !important;
+    font-size: 0.5 !important;
+    line-height: 20px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 20px;
+  }
+
+  @media (${devices.mobileM}) {
+    font-weight: 500 !important;
+    font-size: 10 !important;
+    line-height: 20px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 20px;
+  }
+
+  @media (${devices.laptop}) {
+  display:none;
+  }
+`;

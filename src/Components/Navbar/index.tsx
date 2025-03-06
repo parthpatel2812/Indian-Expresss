@@ -1,4 +1,4 @@
-import { StyledLink, ImgStyle, NavStyle } from "./style";
+import { StyledLink, ImgStyle, NavStyle, Timing } from "./style";
 import Logo from "../../assets/Logo.jpg";
 import { routes } from "../../routes";
 import { Marquee } from "./Marquee";
@@ -37,13 +37,9 @@ export const Navbar = () => {
         <StyledLink to={routes.home} className="item" onClick={handleMenuClick}>
           Menu
         </StyledLink>
-        <StyledLink
-          to={routes.home}
-          className="item"
-          onClick={handleFooterClick}
-        >
-          Timing
-        </StyledLink>
+      <Timing href="https://www.bing.com/search?q=%2bThe+Indian+Expresss+Food+Truck&filters=rcrse%3a%221%22&FORM=RCRE#:~:text=Closed%20%C2%B7-,Opens%20Mar%205%20at%206%20pm,-Walk%2Din%20%C2%B7">
+      Timing
+      </Timing>
         <StyledLink
           to={routes.home}
           className="item"
