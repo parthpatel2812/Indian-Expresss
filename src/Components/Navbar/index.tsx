@@ -40,6 +40,9 @@ export const Navbar = () => {
       <Timing href="https://www.bing.com/search?q=%2bThe+Indian+Expresss+Food+Truck&filters=rcrse%3a%221%22&FORM=RCRE#:~:text=Closed%20%C2%B7-,Opens%20Mar%205%20at%206%20pm,-Walk%2Din%20%C2%B7">
       Timing
       </Timing>
+      <Timing href="https://repasorder.com/app/home/44c4f30a-6992-9ad5-75f4-2ac8358e10da">
+      Online Order
+      </Timing>
         <StyledLink
           to={routes.home}
           className="item"
