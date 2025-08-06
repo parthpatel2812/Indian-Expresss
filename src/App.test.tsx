@@ -2,8 +2,17 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { App } from "./App";
 
-test("renders learn react link", () => {
+// Mock ResizeObserver for the test environment
+beforeAll(() => {
+  global.ResizeObserver = class {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  } as any;
+});
+
+test("renders INDIAN EXPRESSS LLC text", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const titleElement = screen.getByText(/INDIAN EXPRESSS LLC/i);
+  expect(titleElement).toBeInTheDocument();
 });
