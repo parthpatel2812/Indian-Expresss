@@ -107,7 +107,10 @@ export const Sidebar = () => {
               Menu
             </StyledLink>
             <hr />
-
+<Timing href="https://repasorder.com/app/home/44c4f30a-6992-9ad5-75f4-2ac8358e10da">
+      Online Order
+      </Timing>
+      <hr/>
             <StyledLink to={routes.home} onClick={handleScrollToFooter}>
               Contact Us
             </StyledLink>
